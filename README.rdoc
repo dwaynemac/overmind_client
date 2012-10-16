@@ -1,0 +1,47 @@
+= ActivityStream Client
+
+== Usage
+
+=== For a Rails app
+
+In Gemfile
+
+    gem 'activity_stream_client'
+
+You'll need to override #local? method
+
+    module ActivityStream
+      class Activity < LogicalModel
+        def local?
+          generator == 'your-app-name'
+        end
+      end
+    end
+
+And you should define:
+
+    ActivityStream::HYDRA
+    ActivityStream::API_KEY
+
+=== For a non-Rails app
+
+In Gemfile
+
+    gem 'activity_stream_client'
+
+# TODO ...
+
+== Updating gem
+
+=== Build gem locally:
+
+    gem build activity_stream_client.gemspec
+
+=== Push to rubygems
+
+    gem push activity_stream_client-X.Y.Z.gem
+
+== TODO
+
+  * specs!
+  * non-Rails app usage example
