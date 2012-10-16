@@ -1,6 +1,7 @@
+require 'typhoeus'
 # == begin app initializer
-module ActivityStream
-  HYDRA = Typhoeus::Hydra.new
+module Overmind
+  HYDRA = ::Typhoeus::Hydra.new
   HOST = "localhost:3007"
   APP_KEY = "secret-key"
 end

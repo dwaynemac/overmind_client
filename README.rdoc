@@ -1,4 +1,4 @@
-= ActivityStream Client
+= Overmind Client
 
 == Usage
 
@@ -6,28 +6,18 @@
 
 In Gemfile
 
-    gem 'activity_stream_client'
-
-You'll need to override #local? method
-
-    module ActivityStream
-      class Activity < LogicalModel
-        def local?
-          generator == 'your-app-name'
-        end
-      end
-    end
+    gem 'overmind_client'
 
 And you should define:
 
-    ActivityStream::HYDRA
-    ActivityStream::API_KEY
+    Overmind::HYDRA
+    Overmind::API_KEY
 
 === For a non-Rails app
 
 In Gemfile
 
-    gem 'activity_stream_client'
+    gem 'overmind_client'
 
 # TODO ...
 
@@ -35,11 +25,11 @@ In Gemfile
 
 === Build gem locally:
 
-    gem build activity_stream_client.gemspec
+    gem build overmind_client.gemspec
 
 === Push to rubygems
 
-    gem push activity_stream_client-X.Y.Z.gem
+    gem push overmind_client-X.Y.Z.gem
 
 == TODO
 

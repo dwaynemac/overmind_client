@@ -15,4 +15,5 @@ Gem::Specification.new do |gem|
 
   gem.add_dependency "railties", "~> 3.1"
   gem.add_dependency 'logical_model'
+
 end
