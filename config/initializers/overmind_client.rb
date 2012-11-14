@@ -8,6 +8,8 @@ if(defined?(Rails))
     HOST = case Rails.env
       when "production"
        "padma-overmind.herokuapp.com"
+      when "staging"
+       "padma-overmind-staging.herokuapp.com"
       when "development"
        "localhost:3007"
       when "test"
