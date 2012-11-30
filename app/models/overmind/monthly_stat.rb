@@ -3,7 +3,6 @@ module Overmind
   # :ref_date is last day of such month.
   class MonthlyStat < LogicalModel
     self.hydra = HYDRA
-    self.use_ssl = (ENV['RACK_ENV'] == "production")
     self.resource_path = "/api/v0/monthly_stats"
     self.attribute_keys = [
         :id,
