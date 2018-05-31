@@ -9,6 +9,7 @@ module Overmind
         :name,
         :ref_date,
         :account_name,
+        :teacher_username,
         :value,
         :service
     ]
